@@ -1,0 +1,20 @@
+{
+    "request_headers": [
+        ["Accept", "text/html"],
+        ["Accept-Language", "en-GB,en-US;q=0.9,en;q=0.8"],
+        ["User-Agent", "PostmanRuntime/7.29.0"],
+        ["Connection", "keep-alive"],
+        ["Host", "www.example.com"],
+        ["Cache-Control", "no-cache"]
+    ],
+    "request_body_filename": "",
+
+    "response_headers": [
+        ["Server", "dummy"],
+        ["Expires", "-1"],
+        ["Content-Type", "text/html"],
+        ["Date", "12 Jul 2022 07:39:55 GMT"]
+    ],
+    "response_status": 200,
+    "response_body_filename": "bench/fixtures/simple_response.html"
+}

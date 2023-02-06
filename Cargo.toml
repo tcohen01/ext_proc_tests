@@ -1,0 +1,56 @@
+[package]
+name = "ext_proc_playground"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "bench_client"
+path = "src/cmd/bench_client.rs"
+
+[[bin]]
+name = "run_server"
+path = "src/cmd/run_server.rs"
+
+[dependencies]
+futures = "*"
+
+# Dependent tonic-related crates are versioned for stable compilation
+tonic = "0.8.3"
+tonic-types = "0.6.1"
+tokio = {version="1.24.2", features=["rt-multi-thread"]}
+tokio-stream = "0.1.11"
+prost = "0.11.6"
+prost-derive = "0.11.6"
+prost-types = "0.11.6"
+
+# Metrics
+metered = "*"
+
+# Errors and logging
+quick-error = "*"
+log = "*"
+env_logger = "*"
+
+# Commandline Arguments Parser
+clap = {version="*", features=["derive"]}
+
+# Deserialize Data Config
+serde = {version="*", features=["derive"]}
+serde_json = "*"
+
+# Async Stream
+async-stream = "*"
+
+[build-dependencies]
+# For External Processor Proto
+tonic-build = "0.8.4"
+
+[dev-dependencies]
+# Fixture Generation
+build_html = "*"
+memorable-wordlist = "*"
