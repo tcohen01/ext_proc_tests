@@ -14,6 +14,6 @@ External Processor Stream Reuse artificial performance comparison test
 A few things to note:
 
 * Client doesn't have and cannot have a way to cut a transaction short - all requests sent by the client must be responded to.
-** Aborting a transaction in a stream will then require waiting for and ignoring outstanding responses
-** This will be more complicated for responses that don't have 1-1 relation to a request (many responses for one request, may be an option later for streaming large replacement bodies from the External Processor server to the client) - Explicitly state which request number within the transaction the response is referring to and how many responses for that request?
+  * Aborting a transaction in a stream will then require waiting for and ignoring outstanding responses
+  * This will be more complicated for responses that don't have 1-1 relation to a request (many responses for one request, may be an option later for streaming large replacement bodies from the External Processor server to the client) - Explicitly state which request number within the transaction the response is referring to and how many responses for that request?
 * RequestHeaders request should always be considered the start of a new transaction within a reused stream.
